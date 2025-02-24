@@ -40,7 +40,7 @@
         </fieldset>
         <fieldset>
             <legend>Options</legend>
-            Homme <input type="checkbox" v-model="homme"> Femme <input type="checkbox" v-model="femme"> Téléphone <input type="checkbox" v-model="tel"> Photo
+            Homme <input type="checkbox" v-model="homme"> Femme <input type="checkbox" v-model="femme"> Téléphone et Email <input type="checkbox" v-model="tel"> Photo
             <select v-model="taille">
                 <option value="1">Petit</option>
                 <option value="2" selected>Moyen</option>
@@ -56,6 +56,7 @@
                 <img :src="p.picture.medium" v-if="taille==2">
                 <img :src="p.picture.large" v-if="taille==3"> {{p.name.title}} {{p.name.first}} {{p.name.last}}<br>
                 <div v-if="tel">{{p.phone}}</div>
+                <div v-if="tel">{{p.email}}</div>
                 <div>{{p.location.country}}</div>
             </div>
         </div>
